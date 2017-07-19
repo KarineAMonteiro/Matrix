@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+   <meta charset="UTF-8"/>
+   <title>Formulário</title>
+   <div class="card-panel teal lighten-2"><center><b>Cadastro</div><br>
+      	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.css">
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+        <script src="js/materialize.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+	
+   
+   </head>
+   <body>
+   <div class="container">
+   
+   <div id="form"> <!--vue -->
+   <form name="formulario" method="post" action=""> 
+        <div class="row">
+		<div class="input-field inline col s12">  
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="validate" v-model="nome">
+        </div>
+		</div>
+
+        <div class="row">
+        <div class="input-field inline col s12">           
+		    <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" class="validate" v-model="email">
+	    </div>
+        </div>
+		
+		<div class="row">
+		<div class="input-field inline col s12">  
+            <label for="sexo">Sexo</label>
+			<select name="sexo" id="sexo">
+            <option disabled selected/>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            </select>
+	    </div>
+        </div>
+		
+		<div class="row">
+        <label for="curso">Curso:</label>
+          <div class="input-field inline col s12">
+            <select name="curso" id="curso" v-model="curso">
+              <option value="" disabled selected></option>
+              <option value="informatica">Curso Técnico em Informática</option>
+              <option value="alimentos">Curso Técnico em Alimentos</option>
+              <option value="agropecuaria">Curso Técnico em Agropecuária</option>
+            </select>
+          </div>
+      </div>  
+    
+      <div class="row">
+        <label for="endereco">Endereço para correspondência:</label>
+          <div class="input-field inline  col s12">
+            <input v-model="endereco" id="endereco" type="text" class="validate" name="endereco" required>
+          </div>
+      </div>
+          
+      <div class="row">
+        <label for="complemento">Complemento do endereço:</label>
+          <div class="input-field inline  col s12">
+            <input v-model="complemento" id="complemento" type="text" class="validate" name="complemento" required>
+          </div>
+      </div>  
+              
+      <div class="row">
+        <label for="cep">CEP:</label>
+          <div class="input-field inline col s12">
+            <input v-model="cep" id="cep" type="text" class="validate" name="cep" required>
+          </div>
+      </div>    
+
+       <div class="row">
+        <label for="municipio">Município:</label>
+          <div class="input-field inline col s9">
+            <input v-model="municipio" id="municipio" type="text" class="validate" name="municipio" required>
+          </div>
+
+          <div class="input-field col s3 inline">
+            <select name="uf" id="uf" v-model="uf" class="browser-default">
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AM">AM</option>
+              <option value="AP">AP</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MG">MG</option>
+              <option value="MS">MS</option>
+              <option value="MT">MT</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="PR">PR</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS" selected>RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SE">SE</option>
+              <option value="SP">SP</option>
+              <option value="TO">TO</option>
+            </select>
+          </div>
+      </div>
+		
+
+        <div class="row">
+        <div>
+
+            <button class="btn waves-effect waves-light" type="submit" @click="salvar">Salvar</button>
+
+        </div>
+        </div>
+
+        </form> 
+			</div><!-- fim div do vue-->
+        </div><!-- fim div container-->
+         
+        <script src="js/inicializacao.js"></script>
+		<script src="js/segundo.js"></script>		
+        </body>
+        </html>
+
+             
+		
+	
